@@ -1,0 +1,12 @@
+I"<p>If there are any, I’d recommend cloning the repos you’d like to keep onto your local computer before doing this.<br />
+<br />
+<script type="math/tex">\textbf{1.}</script> Go to your github homepage and create a Personal Access Token <br />
+         1a. On the home page, click on the arrow in the upper right corner <br />
+           1b. Click on “Settings”  <br />
+           1c. At the bottom left column, click on “Developer Settings”  <br />
+           1d. Click “Personal Access Tokens”  <br />
+<br /><br />
+<script type="math/tex">\textbf{2.}</script> Generate a new token and copy it to your clipboard<br />
+<br /><br /><br />
+<script type="math/tex">\textbf{3.}</script> Open terminal and open .zshrc in a text editor and write</p>
+:ET
