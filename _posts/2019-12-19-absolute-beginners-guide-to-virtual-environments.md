@@ -15,7 +15,7 @@ This is chaos. This is madness. And it's avoidable with virtual environments.
 
 When pip installs pandas, pandas comes with libraries upon which it is dependent. That is to say, those dependencies are automatically installed right alongside pandas. So when you write ``` pip install pandas ``` you are actually installing several packages. Below are the names of the libraries that are installed with pandas.
 
-![](absolute_beginner_imgs/pandas_dependencies.png)  
+![](imgs/2019-12-18/pandas_dependencies.png)  
 
 The problems described above are due to these dependencies. To generalize, when main_package_1 depends on packageA version 2.2.0 and main_package_2 depends on the same packageA but with version 1.9.9 you will have problems using main_package_1 and main_package_2 in the same project if you do not have both versions of packageA. You probably could explicitly install both versions, but things quickly get complicated with codependencies when you begin to install many packages and all their dependencies. Not only that but if you upgrade one package for a project, an older project may not work anymore because it needed the older version of the package to function. Maybe you could install every version of every package on your computer, but it's way easier just to use a virtual environment for each project.
 
@@ -29,5 +29,3 @@ When I first started using virtual environments I began with virtualenv. As far 
 Pyenv is a way to control which version of python is being used for a project.
 
 # pipenv  
-
- 
