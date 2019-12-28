@@ -1,4 +1,4 @@
-I"¢è<h2 id="navigation">Navigation</h2>
+I"ë<h2 id="navigation">Navigation</h2>
 <ol>
   <li><a href="sets#introduction">Introduction</a></li>
   <li><a href="sets#sets">Sets</a></li>
@@ -19,7 +19,7 @@
 
 <p><br /><br /></p>
 <h2 id="sets">Sets</h2>
-<p><b>Sets</b> are a unique collection of items. These items can be anything: numbers, apples, oranges, types of toothpaste, cars, galaxies, whatever. These individual items that compose a set are called <br />elements&lt;/br&gt;. Sets are denoted with curly braces and the elements are listed inside separated by a comma. Below are some examples:</p>
+<p><b>Sets</b> are a unique collection of items. These items can be anything: numbers, apples, oranges, types of toothpaste, cars, galaxies, whatever. The individual items that compose a set are called <br />elements&lt;/br&gt;. Sets are denoted with curly braces and the elements are listed inside separated by a comma. Below are some examples:</p>
 
 <script type="math/tex; mode=display">% <![CDATA[
 \begin{aligned}
@@ -28,13 +28,20 @@
   S_3 &= \{\text{green, red, blue, orange, purple}\}
 \end{aligned} %]]></script>
 
+<p>In set notation when an element <script type="math/tex">x</script> belongs to a set <script type="math/tex">A</script> it is denoted</p>
+
+<script type="math/tex; mode=display">x \in A</script>
+
+<p>If an element does not belong to a set <script type="math/tex">A</script> it is denoted</p>
+
+<script type="math/tex; mode=display">x \not \in A</script>
+
 <p>The order and repetition does not matter when it comes to a set.
 That is to say</p>
 
 <script type="math/tex; mode=display">\{\text{a, a, a, b, c}\} = \{\text{a, b, c}\} = \{\text{c, b, a}\} = \{\text{b, c, a}\}</script>
 
-<p>The equation immediately above shows that all 4 sets are all equal. Repetition does not matter. Order does not
-matter. All that matters is that you have the unique elements that belong to the set.</p>
+<p>The equation immediately above shows that all 4 sets are all equal. Repetition does not matter. Order does not matter. All that matters is that you have the unique elements that belong to the set.</p>
 
 <p>Although sets can contain anything, when talking about discrete and continuous sets, it is helpful to think of set elements as numbers.</p>
 
