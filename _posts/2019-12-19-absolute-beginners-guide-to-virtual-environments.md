@@ -4,17 +4,30 @@ title: "Absolute Beginner's Guide to Virtual Environments"
 Author: Tim Christy
 ---
 # Introduction
-When I first started in coding in Python, I had no idea what virtual environments were. They were never immediately necessary for me in my coding projects, because for the most part I just used Jupyter Notebooks in Anaconda. Over time, I grew to dislike Anaconda because I didn't understand what it was doing. It just looked like a mess of file installations on my computer and I didn't know what did what. It seemed like a lot was going on and in order to understand it I had to explore it manually. I don't really know how true that is, I probably could have been able to figure out Anaconda just as well, but the approach I took was to start with a text editor and use Ipython. Later that grew to include Jupyter Notebooks. In the blog that follows, you'll find an introduction to what virtual environments are, several ways to manage them, and the way I currently manage them.   
+When I first started in coding in Python, I had no idea what virtual environments were. They were never really necessary for me to learn in my coding projects because I just used Anaconda; which automatically handles virtual environments for you. I like this, in retrospect, but I didn't like it at the time. It just looked like a mess of file installations on my computer and I didn't know what anything did other than take up space. It seemed that if I was going to understand it I had to explore it manually. I started simple with a text editor and Ipython from the terminal, but later that grew to include Jupyter Notebooks. In the blog that follows, you'll find what I learned about virtual environments and a good routine for setting up project environments with Jupyter Notebooks (or a text editor).
 
-There is also information about pyenv at the end which, simply put, is a package that allows for easy switching between different versions of Python.   
 
 
 
 # Virtual Environments   
-Often for a project, a fresh installation of Python is not enough. Library imports are needed to add functionality (numpy, pandas, scikit-learn, etc). Using pip, packages containing these library imports can be downloaded to your computer and imported from your computer into your code. But where are these packages being installed? When I first started, I didn't even know enough to care about it. I just wanted to get going on projects with my new text editor/IPython set-up.
+Say you're starting with a new Mac (or restored from factory settings) and you have a fresh installation of Python. You start a project with this installation, but quickly realize it is not enough to code with. You have to add packages that extend Python's functionality (like numpy, pandas, scikitlearn, etc). So you install pip, install the packages you need, carry on with the project, finish it up, and everything works fine. Then you do another project, pip install some new packages for it, and still everything is fine. And then another project, and another, and on like this until eventually, you start having problems importing packages into your latest project. You go ahead and fix it but then other packages start messing up. Everything is going wrong and you have no idea why. Every line of code you write seems to produce an error. Certain packages can't be found and you just installed them.
+This is chaos. This is madness. And it's avoidable with virtual environments.
 
-So you start a project. You pip install what you need for that project and carry on with it, finish up, and everything works fine. Then you do it again for another project, pip install some new packages for it, and still everything is fine. And then another project, and another, and on like this until bam, you're getting problems importing packages into your latest project. You go ahead and fix it but then other packages start messing up. It feels like everything is going wrong and you have no idea why. Certain packages can't be found and others are creating errors. Eventually you're frustrated enough to completely reinstall everything and waste a lot of time doing so. This is how you learn about virtual environments the hard way.   
+When pip installs pandas, pandas comes with libraries upon which it is dependent. That is to say, those dependencies are automatically installed right alongside pandas. So when you write ``` pip install pandas ``` you are actually installing several packages. Below are the names of the libraries that are installed with pandas.
 
-When pip installs say pandas, pandas comes with libraries upon which it is dependent. That is to say, those dependencies are automatically installed right alongside pandas. So when you write ``` pip install pandas ``` you are actually installing several packages. Below are the names of the libraries that are installed with pandas.
+![](absolute_beginner_imgs/pandas_dependencies.png)  
 
-![](absolute_beginner_imgs/pandas_dependencies.png)
+The problems described above are due to these dependencies. To generalize, when main_package_1 depends on packageA version 2.2.0 and main_package_2 depends on the same packageA but with version 1.9.9 you will have problems using main_package_1 and main_package_2 in the same project if you do not have both versions of packageA. You probably could explicitly install both versions, but things quickly get complicated with codependencies when you begin to install many packages and all their dependencies. Not only that but if you upgrade one package for a project, an older project may not work anymore because it needed the older version of the package to function. Maybe you could install every version of every package on your computer, but it's way easier just to use a virtual environment for each project.
+
+Virtual environments isolate the packages you use for specific projects and have all the packages you install dedicated only to that project. They are dedicated "environment" containing packages for one project. In this way your dependencies will not get mixed up between projects.  
+
+# venv, virtualenv, pipenv  
+
+When I first started using virtual environments I began with virtualenv. As far as I know, venv and virtualenv do the same thing in that you can use them to create virtual environments for projects. These are fine and they work, but it seems that pipenv is a much better way to go. The difference is that pipenv outputs the packages a project used in an easy-to-read manner and pipenv can be used to install packages. Virtualenv and venv can output requirements.txt (a list of all the packages used), but the problem is that it is a little bit of a mess because it just lists everything used in the project.
+
+# pyenv  
+Pyenv is a way to control which version of python is being used for a project.
+
+# pipenv  
+
+ 
