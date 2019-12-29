@@ -1,0 +1,45 @@
+I"j<p><br /></p>
+
+<h3 id="introduction">Introduction</h3>
+<p>When I first started in coding in Python, I had no idea what virtual environments were. They were never really necessary for me to learn in my coding projects because I just used Anaconda; which automatically handles virtual environments for you. I like this, in retrospect, but I didn’t like it at the time. It just looked like a mess of file installations on my computer and I didn’t know what anything did other than take up space. It seemed that if I was going to understand it I had to explore it manually. I started simple with a text editor and Ipython from the terminal, but later that grew to include Jupyter Notebooks. In the blog that follows, you’ll find what I learned about virtual environments and a good routine for setting up project environments with Jupyter Notebooks (or a text editor).</p>
+
+<p><br /></p>
+
+<h3 id="virtual-environments">Virtual Environments</h3>
+<p>Say you’re starting with a new Mac (or restored from factory settings) and you have a fresh installation of Python. You start a project with this installation, but quickly realize it is not enough to code with. You have to add packages that extend Python’s functionality (like numpy, pandas, scikitlearn, etc). So you install pip, install the packages you need, carry on with the project, finish it up, and everything works fine. Then you do another project, pip install some new packages for it, and still everything is fine. And then another project, and another, and on like this until eventually, you start having problems importing packages into your latest project. You go ahead and fix it but then other packages start messing up. Everything is going wrong and you have no idea why. Every line of code you write seems to produce an error. Certain packages can’t be found and you just installed them.
+This is all very frustrating and it’s why virtual environments exist.</p>
+
+<p>When pip installs pandas, pandas comes with libraries upon which it is dependent. That is to say, those dependencies are automatically installed right alongside pandas. So when you write <code class="highlighter-rouge">pip install pandas</code> you are actually installing several packages. Below are the names of the libraries that are installed with pandas.</p>
+
+<p><img src="../../../../assets/imgs/blogs/2019-12-18/pandas_dependencies.png" alt="" /></p>
+
+<p>The problems described above are due to these dependencies. To generalize, when main_package_1 depends on packageA version 2.2.0 and main_package_2 depends on the same packageA but with version 1.9.9 you will have problems using main_package_1 and main_package_2 in the same project if you do not have both versions of packageA. You probably could explicitly install both versions, but things quickly get complicated with codependencies when you begin to install many packages and all their dependencies for multiple projects. Not only that but if you upgrade packages for a new project, an older project may not work anymore because it needed the older version of those packages to function. Maybe you could install every version of every package on your computer, but it’s way easier just to use a virtual environment for each project.</p>
+
+<p>Virtual environments isolate the packages you use for specific projects and have all the packages you install dedicated only to that project. They are dedicated “environment” containing packages for one project. In this way your dependencies will not get mixed up between projects.</p>
+
+<p><br /></p>
+
+<h3 id="venv-virtualenv-pipenv">venv, virtualenv, pipenv</h3>
+
+<p>Initially, I began managing virtual environments with virtualenv. As far as I know, venv and virtualenv do the same thing in that you can use them to create virtual environments for projects. These are fine and they work, but it seems that pipenv is the better way to go.
+The reason is due to how you share the packages you used with others. When you are finished with a project, you will want to output a text document that contains a list of all the packages you used for the project and their version numbers. venv and virtualenv do this but they do so in a manner that is harder to understand because the list contains everything used, including all dependencies  instead of just the main packages used. With pipenv this list is called a pipfile, and it contains the packages a project used in an easy-to-read manner. You can see the main packages used. pipenv can also be used to install packages. Ultimately, it doesn’t really matter</p>
+
+<p><br /></p>
+
+<h3 id="pyenv">pyenv</h3>
+<p>Putting virtual environments aside for a moment, you may want to install pyenv. pyenv is a way to control which version of python is being used for a project. You can also use pyenv-virtualenv to control virtual environments with it, but again, I think pipenv is better due to the aforementioned pipfiles.<br />
+Mac automatically comes with Python 2 and 3 installed on it but I highly suggest not touching anything to do with those installations. Instead, if you install pyenv, you can control everything that has to do with python, concerning your projects, with it.  How to install this is located here: <a href="https://github.com/pyenv/pyenv">https://github.com/pyenv/pyenv</a>.</p>
+
+<p>In short what this does is hijack your PATH variable through a “shims” directory so that anytime your system does something Python-related, it is directed through here.</p>
+
+<p>(Real quick: if you don’t know what a path variable is, open your terminal and type <code class="highlighter-rouge">bash echo "$PATH"</code>. This will print out the paths that your computer searches through separated by a “:”. When you type “python” in the terminal, your computer goes through each of these paths to look for python and activates the first instance of it it sees. So when shims gets placed on the front of this path, it essentially will always be the first instance of python your computer sees)</p>
+
+<p><br /></p>
+
+<h3 id="pipenv">pipenv</h3>
+<p>You can install pipenv from here <a href="https://pypi.org/project/pipenv/">https://pypi.org/project/pipenv/</a>. This will be your new pip installer and will keep everything contained in a virtual environment dedicated to a project. All you have to do before starting a project is make sure you are in your project folder and type</p>
+
+<p><code class="highlighter-rouge">pipenv shell</code></p>
+
+<p>This will create a virtual environment</p>
+:ET
