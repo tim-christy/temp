@@ -7,7 +7,7 @@ Author: Tim Christy
 <br>
 
 ### Introduction
-When I first started in coding in Python, I had no idea what virtual environments were. They were never really necessary for me to learn in my coding projects because I just used [Anaconda; which automatically handles virtual environments for you so you don't have to really learn any of this](https://www.anaconda.com/). In retrospect, this is pretty cool, but I didn't think so several months ago. It just looked like a mess of file installations on my computer and I didn't know what anything did other than take up space. It seemed that if I was going to understand it I had to explore it manually. I started simple with a text editor and Ipython from the terminal, but later that grew to include Jupyter Notebooks. In the blog that follows, you'll find what I learned about virtual environments and a good routine for setting up project environments with Jupyter Notebooks (or a text editor).
+When I first started in coding in Python, I had no idea what virtual environments were. They were never really necessary for me to learn in my coding projects because I just used [Anaconda; which automatically handles virtual environments for you](https://www.anaconda.com/) so you don't have to really learn any of this. In retrospect, this is pretty cool, but I didn't think so several months ago. It just looked like a mess of file installations on my computer and I didn't know what anything did other than take up space. In an effort to understand it all I deleted Anaconda and tried to control everything manually. I started simple with a text editor and IPython from the terminal, but later that grew to include Jupyter Notebooks. In the blog that follows, you'll find what I learned about virtual environments and a good routine for setting up project environments with Jupyter Notebooks (or a text editor).
 
 <br>
 
@@ -140,8 +140,7 @@ where again, ``project_name `` is the name of your project.
 
 
 
-### References  
-I searched through a lot of different documentation and youtube videos in my effort to understand these packages.  
+### References   
 
 1) [Cory Schafer's video on pipenv](https://youtu.be/zDYL22QNiWk).
 I highly recommend watching his videos in general. He covers all of this as well as virtualenv, venv, pipenv, and pyenv. I owe a lot of what I understand about this to his explanations.  
