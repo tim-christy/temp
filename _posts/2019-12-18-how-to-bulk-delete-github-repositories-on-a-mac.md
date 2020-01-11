@@ -14,13 +14,13 @@ $$\textbf{1.}$$ Go to your github homepage and create a Personal Access Token
 <br><br>
 $$\textbf{2.}$$ Generate a new token and copy it to your clipboard  
 <br><br><br>
-$$\textbf{3.}$$ Open terminal and open .zshrc in a text editor and write
+$$\textbf{3.}$$ Open terminal and open .zshrc in a text editor and on a new line somewhere write 
 
 ```bash
 export DELETE_REPO_TOKEN=(paste your repo token here)
 ```
 
-    save and close .zshrc.   
+save and close .zshrc.   
 <br><br><br>
 
 $$\textbf{4.}$$ brew install gnu-sed   
