@@ -2,4 +2,7 @@
 layout: page
 title: Probability and Statistics
 ---
-### [Sets](sets/sets)
+
+##### [Quick Reference for Descriptive Statistics](basic_statistics/basic_statistics)
+
+##### [Sets](sets/sets)

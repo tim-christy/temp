@@ -1,0 +1,30 @@
+I"¢<p>Here youâ€™ll find a quick reference to some descriptive statistics definitions.</p>
+
+<ol>
+  <li><a href="#measures-of-cental-tendency">Measures of Central Tendency</a>
+    <ol>
+      <li><a href="#mean">Mean</a></li>
+      <li>Median</li>
+      <li>Mode</li>
+    </ol>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="measures-of-central-tendency">Measures of Central Tendency</h3>
+<p>In any given data set, the values of those data tend to have some points in which they cluster around. Some measures of the degree to which they cluster are described by the mean, median, and mode.</p>
+
+<p><br /></p>
+<h4 id="mean">Mean</h4>
+<p>The mean is the sum of all the individual values divided by the number of values there are. Given a set of data: <script type="math/tex">[x_1, x_2, x_3, ..., x_n]</script>, the mean of the data is defined as follows</p>
+
+<script type="math/tex; mode=display">\bar{x} = \frac{\sum_{i=1}^n x_i}{n}</script>
+
+<p>It is worth noting that the mean is sensitive to outliers. For example, if you have a dataset consisting of [1, 2, 3, 4, 5, 6000] the mean of this dataset will be mainly influenced by the last datapoint in that set. The mean for this set is 1002.5 even though most of the values a very small.</p>
+
+<p><br /></p>
+
+<h4 id="median">Median</h4>
+<p>The median is the middle value, or 50th percentile, in a data set. That is if you were to arrange all the values in numerical order, the median value would be the</p>
+:ET

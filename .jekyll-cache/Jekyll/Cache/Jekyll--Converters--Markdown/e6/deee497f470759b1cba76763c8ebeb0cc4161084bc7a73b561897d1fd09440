@@ -1,0 +1,47 @@
+I"�
+<p>If there are any, I’d recommend cloning the repos you’d like to keep onto your local computer before doing this.<br />
+<br />
+<script type="math/tex">\textbf{1.}</script> Go to your github homepage and create a Personal Access Token <br />
+         1a. On the home page, click on the arrow in the upper right corner <br />
+           1b. Click on “Settings”  <br />
+           1c. At the bottom left column, click on “Developer Settings”  <br />
+           1d. Click “Personal Access Tokens”  <br />
+<br /><br />
+<script type="math/tex">\textbf{2.}</script> Generate a new token and copy it to your clipboard<br />
+<br /><br /><br />
+<script type="math/tex">\textbf{3.}</script> Open terminal and open .zshrc in a text editor and on a new line somewhere write</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">DELETE_REPO_TOKEN</span><span class="o">=(</span><span class="nb">paste </span>your repo token here<span class="o">)</span>
+</code></pre></div></div>
+
+<p>save and close .zshrc. <br />
+<br /><br /><br /></p>
+
+<p><script type="math/tex">\textbf{4.}</script> brew install gnu-sed</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>gnu-sed
+</code></pre></div></div>
+<p><br /><br /><br />
+<script type="math/tex">\textbf{5.}</script> Open a text editor again and paste in the following code <a href="#sources">1</a> &amp; <a href="#sources">2</a>. Make sure you know the file path of where you save it.</p>
+
+<script src="https://gist.github.com/tim-christy/25f838122d415fb02eb5043a1f5441ac.js"></script>
+
+<p><br /><br /><br /></p>
+
+<p><script type="math/tex">\textbf{6.}</script>  Run the following in the terminal</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash path/to/script/delete_all_my_github_repositories.
+</code></pre></div></div>
+
+<p>This deleted around 30 repos each time it ran. I ended up running a for loop in a Jupyter Notebook to delete everything.</p>
+
+<p><img src="../../../../assets/imgs/blogs/2019-12-18/delete_repos_loop.png" /></p>
+
+<p>After you’re done, don’t forget to delete your Personal Access Token so that it is no longer active on GitHub.</p>
+
+<p>And that’s it, all your repos should be deleted.
+<br /><br /><br /><br /></p>
+<h1 id="sources">Sources</h1>
+<p>[1] <a href="https://gist.github.com/andybeak/602611212950559df9c102b0d1ae20c7">https://gist.github.com/andybeak/602611212950559df9c102b0d1ae20c7</a> <br />
+[2] <a href="https://github.com/pyrsmk/molt/issues/8">https://github.com/pyrsmk/molt/issues/8</a></p>
+:ET

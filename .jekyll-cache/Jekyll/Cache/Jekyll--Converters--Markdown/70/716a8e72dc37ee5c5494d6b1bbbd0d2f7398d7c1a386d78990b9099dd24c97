@@ -1,0 +1,20 @@
+I"<p>Here you’ll find a quick reference to some descriptive statistics definitions.</p>
+
+<ol>
+  <li><a href="#measures-of-cental-tendency">Measures of Central Tendency</a>
+    <ol>
+      <li><a href="#mean">Mean</a></li>
+      <li>Median</li>
+      <li>Mode</li>
+    </ol>
+  </li>
+</ol>
+
+<h3 id="measures-of-central-tendency">Measures of Central Tendency</h3>
+<p>In any given data set, the values of those data tend to have some points in which they cluster around. Some measures of the degree to which they cluster are described by the mean, median, and mode.</p>
+
+<p><br /></p>
+
+<h4 id="mean">Mean</h4>
+<p>The mean is the sum of all the individual values divided by the number of values there are. Given a set of data: <script type="math/tex">[x_1, x_2, x_3, ..., x_n]</script>, the mean of the data is defined as follows <script type="math/tex">\bar{x}</script> = \frac{\sum_{i=1}^n x_i}</p>
+:ET
