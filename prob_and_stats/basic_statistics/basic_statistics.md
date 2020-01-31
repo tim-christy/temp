@@ -4,7 +4,7 @@ title: Quick Reference for Descriptive Statistics
 author: Tim Christy
 ---
 
- Here you'll find a quick reference to some descriptive statistics definitions.
+
 
  1. [Measures of Central Tendency](#measures-of-cental-tendency)
     1. [Mean](#mean)  
@@ -16,7 +16,7 @@ author: Tim Christy
 <br>
 
 ### Measures of Central Tendency
-In any given data set, the values of those data tend to have some points in which they cluster around. Some measures of the degree to which they cluster are described by the mean, median, and mode.  
+In any given data set, the values of those data tend to have some point in which they cluster around. Some measures of the value they cluster around are described by the mean, median, and mode.  
 
 <br>
 #### Mean
@@ -31,17 +31,17 @@ It is worth noting that the mean is sensitive to outliers. For example, if you h
 #### Median
 The median is the middle value, or 50th percentile, in a data set. That is if you were to arrange all the values from smallest to largest, the median value would be the middle datapoint (or if there are two middle datapoints, the mean of the two middle points). Here are two examples:  
 
-1. $$A = [5, 7, 8, 1, 4, 9, 3]$$  
+1) $$A = [5, 7, 8, 1, 4, 9, 3]$$  
 
-For this dataset, we first arrange all values in numerical order like so  
+For dataset A, we first arrange all values in numerical order like so  
 
 $$A = [1, 3, 4, 5, 7, 8, 9]$$  
 
 We see that the middle value is 5 because there are 3 datapoints to the left and 3 data points to the right of the number 5 in the list. This is the median of this dataset.  
 
-2. $$B = [6, 3, 7, 2, 4, 10]$$  
+2) $$B = [6, 3, 7, 2, 4, 10]$$  
 
-For this dataset, we proceed as before  
+For dataset B, we proceed as before  
 
 $$B = [2, 3, 4, 6, 7, 10]$$  
 
