@@ -1,15 +1,20 @@
 ---
 layout: page
-title: Quick Reference for Descriptive Statistics
+title: Quick Reference- Descriptive Statistics
 author: Tim Christy
 ---
 
-
+by Tim Christy
 
  1. [Measures of Central Tendency](#measures-of-cental-tendency)
     1. [Mean](#mean)  
     1. [Median](#median)  
-    1. [Mode](#mode)  
+    1. [Mode](#mode)
+    1. [Geometric Mean](#geometric-mean)
+    1. [Range](#range)
+    1. [Sum of Squares](#sum-of-squares)
+    1. [Variance](variance)
+    1. [Standard Deviation](standard-deviation)
 
 
 
@@ -22,7 +27,7 @@ In any given data set, the values of those data tend to have some point in which
 #### Mean
 The mean is the sum of all the individual values divided by the number of values there are. Given a set of data: $$[x_1, x_2, x_3, ..., x_n]$$, the mean of the data is defined as follows
 
-$$\bar{x} = \frac{\summation_{i=1}^n x_i}{n}$$  
+$$\bar{x} = \frac{\sum_{i=1}^n x_i}{n}$$  
 
 It is worth noting that the mean is sensitive to outliers. For example, if you have a dataset consisting of [1, 2, 3, 4, 5, 6000] the mean of this dataset will be mainly influenced by the last datapoint in that set. The mean for this set is 1002.5 even though most of the values a very small.
 
@@ -71,6 +76,7 @@ $$\bar{R} = ((1+R_1) * (1+R_2) * \cdots (1+R_n))^{1/n} - 1$$
 
 where $$\bar{R}$$ is the average rate of return and $$R_i$$ is the rate of return during that period.  
 
+<br>
 
 #### Range   
 The range is the difference between the largest value in your data and the smallest.  
@@ -80,9 +86,22 @@ $$Range = X_{largest} - X_{smallest}$$
 Sometimes, when you have to estimate the standard deviation for a distribution, a decent estimate can be
 the range divided by 6. This is because the spread of the normal distribution is captured within 3 standard deviations above and below the mean.  
 
+<br>
 
 #### Sum of Squares  
 
 The sum of squares (SS) is the summation of the difference between each data point and the mean squared.  
 
-$$\mathrm{SS} = \summation_i^n(x_i - \bar{x})^2$$
+$$\mathrm{SS} = \sum_i^n(x_i - \bar{x})^2$$  
+
+This isn't a particularly popular on its own, but it can be used as a metric to gauge the spread of your data. It is essentially a quantification of the total distance the data is from the mean. It is squared because some of the distances come out negative and you would wind up subtracting from the summation otherwise.  
+
+<br>
+
+#### Variance
+There are two variances to consider: 1) population variance and 2) sample variance.  
+
+
+<br>
+
+#### Standard Deviation  

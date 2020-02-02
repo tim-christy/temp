@@ -3,6 +3,9 @@ layout: page
 title: Sets
 author: Tim Christy
 ---
+by Tim Christy
+
+
 ## Navigation
 1. [Introduction](sets#introduction)
 2. [Sets](sets#sets)  
@@ -17,7 +20,7 @@ author: Tim Christy
 <br><br><br>
 
 # Introduction
-This page discusses a some set theory at an introductory level. 
+This page discusses a some set theory at an introductory level.
 
 <br><br>
 ## Sets
