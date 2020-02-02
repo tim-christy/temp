@@ -22,7 +22,7 @@ In any given data set, the values of those data tend to have some point in which
 #### Mean
 The mean is the sum of all the individual values divided by the number of values there are. Given a set of data: $$[x_1, x_2, x_3, ..., x_n]$$, the mean of the data is defined as follows
 
-$$\bar{x} = \frac{\sum_{i=1}^n x_i}{n}$$  
+$$\bar{x} = \frac{\summation_{i=1}^n x_i}{n}$$  
 
 It is worth noting that the mean is sensitive to outliers. For example, if you have a dataset consisting of [1, 2, 3, 4, 5, 6000] the mean of this dataset will be mainly influenced by the last datapoint in that set. The mean for this set is 1002.5 even though most of the values a very small.
 
@@ -53,6 +53,7 @@ As opposed to the mean, the median is unaffected by outliers which can make it a
 
 
 <br>
+
 #### Mode
 The mode is simply the most popular value in the dataset (or the most frequently occurring value). The way I remember it is that in French "à la mode", as in "Pie à la Mode", means "in the current fashion" which I further translate to what is "popular". The mode is what's most popular in a dataset.
 
