@@ -2,7 +2,7 @@ title: timchristy.io
 author: Tim Christy
 email: tim@timchristy.io
 description: > # this means to ignore newlines until "show_excerpts:"
-  Blogs on Data Science: topics posted weekly starting February 1st 2020. The Projects tab above showcases some of my latest work, while the Probability/Statistics and Python tabs are largely tutorial materials I have written to check my own understanding.
+Blogs posted weekly starting February 1st 2020.  
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
