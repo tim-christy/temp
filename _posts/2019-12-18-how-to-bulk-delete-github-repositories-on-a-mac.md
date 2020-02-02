@@ -4,6 +4,11 @@ title: "How to Bulk Delete Github Repositories on a Mac"
 categories: Github
 author: Tim Christy
 ---
+
+by Tim Christy
+
+<br>
+
 If there are any, I'd recommend cloning the repos you’d like to keep onto your local computer before doing this.  
 <br>
 $$\textbf{1.}$$ Go to your github homepage and create a Personal Access Token   
@@ -14,7 +19,7 @@ $$\textbf{1.}$$ Go to your github homepage and create a Personal Access Token
 <br><br>
 $$\textbf{2.}$$ Generate a new token and copy it to your clipboard  
 <br><br><br>
-$$\textbf{3.}$$ Open terminal and open .zshrc in a text editor and on a new line somewhere write 
+$$\textbf{3.}$$ Open terminal and open .zshrc in a text editor and on a new line somewhere write
 
 ```bash
 export DELETE_REPO_TOKEN=(paste your repo token here)

@@ -1,8 +1,10 @@
 ---
 layout: post
-title: "Absolute Beginner's Guide to Virtual Environments"
+title: " Beginner's Guide to Virtual Environments"
 Author: Tim Christy
 ---
+
+by Tim Christy
 
 <br>
 
