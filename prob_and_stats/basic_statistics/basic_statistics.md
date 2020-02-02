@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Quick Reference- Descriptive Statistics
+title: Quick Reference: Descriptive Statistics
 author: Tim Christy
 ---
 
