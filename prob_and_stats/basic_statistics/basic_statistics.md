@@ -55,3 +55,33 @@ As opposed to the mean, the median is unaffected by outliers which can make it a
 <br>
 #### Mode
 The mode is simply the most popular value in the dataset (or the most frequently occurring value). The way I remember it is that in French "à la mode", as in "Pie à la Mode", means "in the current fashion" which I further translate to what is "popular". The mode is what's most popular in a dataset.
+
+
+<br>
+
+#### Geometric Mean   
+The geometric mean can measure the change of a variable overtime.  
+
+$$\bar{X}_{geo} = (X_1 * X_2 * \cdots X_n)^{1/n}$$  
+
+I've only ever used this to calculate the mean rate of return on an investment, via
+
+$$\bar{R} = ((1+R_1) * (1+R_2) * \cdots (1+R_n))^{1/n} - 1$$
+
+where $$\bar{R}$$ is the average rate of return and $$R_i$$ is the rate of return during that period.  
+
+
+#### Range   
+The range is the difference between the largest value in your data and the smallest.  
+
+$$Range = X_{largest} - X_{smallest}$$  
+
+Sometimes, when you have to estimate the standard deviation for a distribution, a decent estimate can be
+the range divided by 6. This is because the spread of the normal distribution is captured within 3 standard deviations above and below the mean.  
+
+
+#### Sum of Squares  
+
+The sum of squares (SS) is the summation of the difference between each data point and the mean squared.  
+
+$$\mathrm{SS} = \summation_i^n(x_i - \bar{x})^2$$
