@@ -29,16 +29,20 @@ So let's look at an example.
 
 # Generating random height data (inches) for 250,000 people  
 
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-%matplotlib inline
+```Python  
+import numpy as np  
+import matplotlib.pyplot as plt  
+%matplotlib inline  
 
-np.random.seed(10
-random_data = [np.random.randint(40, 90) for x in range(250000)]
+np.random.seed(10)  
+random_data = [np.random.randint(40,90) for x in range(250000)]
 ```
 
+<br>
+
 Plotting the distribution of this population...   
+
+<br>
 
 ```python
 plt.figure(figsize=(20,10))
@@ -49,8 +53,7 @@ plt.xticks(fontsize=15)
 plt.yticks(fontsize=15)
 plt.hist(random_data, bins = [40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90]);
 plt.show()
-```   
-
+```
 
 ![](imgs/central-limit-theorem/pop_heights.png)  
 
