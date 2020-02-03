@@ -53,9 +53,12 @@ plt.hist(random_data, bins = [40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90]);
 plt.show()
 ```
 
-![](imgs/central-limit-theorem/pop_heights.png)  
 
-Above we generated data about the heights of 250,000 people. The data we generated gave us a population that is uniformly distributed; meaning that every height is equally likely (how different would that world look?). What is the mean height of this population?   
+![](../../../../assets/imgs/blogs/2020-02-01/pop_heights.png)  
+
+
+
+Above we generated data about the heights of 250,000 people. The data we generated gave us a population that is almost perfectly uniform; meaning that every height is equally likely (how different would that world look?). What is the mean height of this population?   
 
 ```python
 round(np.mean(random_data),1)
@@ -102,7 +105,7 @@ for plot in plots:
     plt.hist(plot);
 ```   
 
-![](central-limit-theorem/samp_dist.png)   
+![](../../../../assets/imgs/blogs/2020-02-01/samp_dist.png)   
 
 # Observations
 
@@ -122,7 +125,7 @@ dist3 = [np.random.randint(60, 100) for x in range(1000)]
 exp = dist1+dist2+dist3
 ```   
 
-![](central-limit-theorem/skewed_pop.png)  
+![](../../../../assets/imgs/blogs/2020-02-01/skewed_pop.png)  
 
 Building and plotting sampling distributions again,  
 
@@ -151,7 +154,7 @@ for plot in plots:
     plt.hist(plot);  
 ```   
 
-![](central-limit-theorem/samp-skewed.png)  
+![](../../../../assets/imgs/blogs/2020-02-01/samp_skewed.png)  
 
 Still, the sampling distributions look normal. The higher the n the better the approximation to the normal distribution.
 
