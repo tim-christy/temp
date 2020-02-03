@@ -7,15 +7,13 @@ by Tim Christy
 
 <br>
 
-Imagine that you want to know the mean height of everybody in Reno, NV. Since it is completely impractical to go out and measure the height of all 250,000+ of us, you would have to rely on sample data (randomly sampled) to estimate this parameter.  
+Imagine that you want to know the mean height of everybody in Reno, NV. Since it is impractical to go out and measure the height of all 250,000+ people, you would have to rely on sample data (*randomly* sampled) to estimate this parameter. The **central limit theorem** says that every single possible mean we could get from our samples follows a normal distribution with a mean that will be very close to the population mean so long as our sample size is large enough.
 
 <br>
 
-The central limit theorem here says that every single possible mean we could get from our samples follows a normal distribution with a mean equal to the population mean; so long as our sample size is large enough. The distribution of every possibile sample mean is called the sample mean distribution.  
+To illustrate, suppose I go out and randomly measure 30 people and take the mean of their heights. Then I go out and do it again for another 30 people. And another. And so on like this until I get every single possible combination of 30 people in the entire city and the mean heights of each of these combinations. The distribution of all of these mean heights form the sampling distribution of the sample mean for a sample size of 30. It is the distribution of every possible mean you could get from a sample of 30 people in this city.
 
-<br>
-
-To illustrate, suppose I go out and randomly measure 30 people and take the mean of their heights. Then I go out and do it again for another 30 people. And another. And so on until I get every single possible combination of 30 people and their mean heights. Each mean height from all the groups I measured forms the sampling distribution. Each mean of 30 people consititutes a single data point in this distribution (ignoring continuity issues with that statement for now).
+It doesn't have to be 30 people either. There is a unique sampling distribution for every value of the sample size chosen. The distribution for samples of 15 people would look different from the sampling distribution of 30 people or 4 people or 16 people, etc. The difference would be due to the standard error; which is the standard deviation of the sampling distribution. The larger the sample size, the smaller the standard error.
 
 <br>
 
@@ -23,7 +21,7 @@ Also, these samples typically need to be done with replacement unless the sample
 
 <br>
 
-So let's look at an example.
+Ok, let's look at an example.
 
 <br>
 
@@ -57,7 +55,7 @@ plt.show()
 
 ![](imgs/central-limit-theorem/pop_heights.png)  
 
-Above we generated data about the heights of 250,000 people. The data we generated gave us a population that is uniformly distributed; meaning that every height is equally likely (weird world to imagine kind of). What is the mean height of this population?   
+Above we generated data about the heights of 250,000 people. The data we generated gave us a population that is uniformly distributed; meaning that every height is equally likely (how different would that world look?). What is the mean height of this population?   
 
 ```python
 round(np.mean(random_data),1)
@@ -66,7 +64,7 @@ round(np.mean(random_data),1)
 
 <br>
 
-Again, the central limit theorem says that despite the shape of the population distribution, the sampling distribution will be normally distributed as long as the sample size n, is large enough (typically 30 or more). Let's build some sampling distributions and check it out.   
+Again, the central limit theorem says that despite the shape of the population distribution, the sampling distribution will be normally distributed with a mean equal to the population mean, as long as the sample size n, is large enough (typically 30 or more). Let's build some sampling distributions and check it out.   
 
 ```python  
 # randomly pick 5 people from the above population, take their average, and repeat 10 times
