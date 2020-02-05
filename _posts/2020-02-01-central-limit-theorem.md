@@ -7,11 +7,11 @@ by Tim Christy
 
 <br>
 
-Imagine that you want to know the mean height of everybody in Reno, NV. Since it is impractical to go out and measure the height of all 250,000+ people, you would have to rely on sample data (*randomly* sampled) to estimate this parameter. The **central limit theorem** says that every single possible mean we could get from our samples follows a normal distribution with a mean that will be very close to the population mean so long as our sample size is large enough.
+Imagine that you want to know the mean height of everybody in Reno, NV. Since it is impractical to go out and measure the height of all 250,000+ people, you would have to rely on sample data (*randomly* sampled) to estimate this parameter. The practical application of the **central limit theorem** here says that every single possible mean we could get from our samples of size n follows a normal distribution with a mean that will be very close to the population mean so long as our sample size, n, is large enough.
 
 <br>
 
-To illustrate, suppose I go out and randomly measure 30 people and take the mean of their heights. Then I go out and do it again for another 30 people. And another. And so on like this until I get every single possible combination of 30 people in the entire city and the mean heights of each of these combinations. The distribution of all of these mean heights form the sampling distribution of the sample mean for a sample size of 30. It is the distribution of every possible mean you could get from a sample of 30 people in this city.
+To illustrate, suppose I go out and randomly survey 30 people and take the mean of their heights. Then I go out and do it again for another 30 people. And another. And so on like this until I get every single possible combination of 30 people in the entire city and the mean heights of each of these combinations. The distribution of all of these mean heights form the sampling distribution of the sample mean for a sample size of 30. It is the distribution of every possible mean you could get from a sample of 30 people in this city.
 
 It doesn't have to be 30 people either. There is a unique sampling distribution for every value of the sample size chosen. The distribution for samples of 15 people would look different from the sampling distribution of 30 people or 4 people or 16 people, etc. The difference would be due to the standard error; which is the standard deviation of the sampling distribution. The larger the sample size, the smaller the standard error.
 
