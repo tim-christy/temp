@@ -106,7 +106,7 @@ Notice that as n gets larger, the mean of the sampling distribution tightens aro
 
 $$SE = \frac{\sigma}{\sqrt{n}}$$
 
-or, because you often do not have the population standard deviation, the sample standard deviation is used, s  
+or, because you often do not have the population standard deviation, the sample standard deviation, s, is used,   
 
 $$SE = \frac{s}{\sqrt{n}}$$  
 
