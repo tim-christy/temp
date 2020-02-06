@@ -7,13 +7,13 @@ by Tim Christy
 
 <br>
 
-Imagine that you want to know the mean height of everybody in Reno, NV. Since it is impractical to go out and measure the height of all 250,000+ people, you would have to rely on sample data (*randomly* sampled) to estimate this parameter. The practical application of the **central limit theorem** here says that every single possible mean we could get from our samples of size n follows a normal distribution with a mean that will be equal to the population mean so long as our sample size, n, is large enough.
+Imagine that you want to know the mean height of everybody in Reno, NV. Since it is impractical to go out and measure the height of all 250,000+ people, you would have to rely on sample data (*randomly* sampled) to estimate this parameter. The practical application of the **central limit theorem** here says that every single possible mean we could get from our samples of size n follows a normal distribution with a mean that will be equal to the population mean. If you think about it with a sample size of n=1, this completely makes sense because every possible sample mean you could obtain from a population with a sample of size n=1 is the population distribution itself.  
 
 <br>
 
-To illustrate, suppose I go out and randomly survey 30 people and take the mean of their heights. Then I go out and do it again for another 30 people... and then another... and another... and so on like this until I get every possible combination of 30 people in the entire city and the mean heights of each of these combinations. The distribution of all of these mean heights form the **sampling distribution of the sample mean** for a sample size of 30. It is the distribution of every possible mean you could get from all samples of 30 people in this city.
+To further illustrate, suppose I go out and randomly survey 30 people and take the mean of their heights. Then I go out and do it again for another 30 people... and then another... and so on like this until I get every possible combination of 30 people in the entire city and the mean heights of each of these combinations. The distribution of all of these mean heights form the **sampling distribution of sample means** for a sample size of 30. It is the distribution of every possible mean you could get from all samples of 30 people in this city.
 
-It doesn't have to be 30 people either. There is a unique sampling distribution for every value of the sample size chosen. The distribution for samples of 15 people would look different from the sampling distribution of 30 people or 4 people or 16 people, etc. The difference would be due to the standard error; which is the standard deviation of the sampling distribution. The larger the sample size, the smaller the standard error. We will see in the example that follows.  
+It doesn't have to be 30 people either. There is a unique sampling distribution for every value of the sample size chosen. The distribution for samples of 15 people would look different from the sampling distribution of 30 people or 4 people or 16 people, etc. The difference would be due to the standard error; which is the standard deviation of the sampling distribution (more on this later). The larger the sample size, the smaller the standard error. We will see in the example that follows.  
 
 To illustrate that the population, does not need to be normally distributed, suppose the heights of 250,000 people follows a uniform distribution.
 
@@ -101,6 +101,7 @@ for plot in plots:
 ![](../../../../assets/imgs/blogs/2020-02-01/samp_dist.png)   
 
 # Observations
+The means of all the sampling distributions are equal to the population mean.  
 
 Notice that as n gets larger, the mean of the sampling distribution tightens around the population mean of 64.5. This can be explained by the standard error, which mentioned earlier, is the standard deviation of the sampling distribution. The formula is as follows  
 
@@ -112,9 +113,9 @@ $$SE = \frac{s}{\sqrt{n}}$$
 
 Either way, because the standard error is inversely proportional to the sample size $n$, the larger the sample size, the smaller the standard error. This is why the sampling distributions above narrow as $n$ gets larger.  
 
-The central limit theorem says that the sampling distribution will be normally distributed with a mean equal to the population mean; which this small simulation supports. It should be noted that there are population distributions in which this theorem will not work (see Cauchy amongst others). Also, if you know your population is normally distributed, then you can be sure that the sampling distribution will also be normally distributed.
+The central limit theorem says that the sampling distribution will be normally distributed with a mean equal to the population mean; which this small simulation supports. It should be noted that there are population distributions in which this theorem will not work (see Cauchy amongst others) but it does work for many. Also, if you know your population is normally distributed, then you can be sure that the sampling distribution will also be normally distributed.
 
-It is also worth reiterating that the distribution of sample means is the distribution of every possible sample mean, which we did not simulate. We simulated 10,000 points per distribution, which is just an approximation to the sampling distribution of sample means. That is why the means were not equal. Despite not being exact, they did come close and improved with increasing values of n, the sample size.
+It is worth reiterating that the distribution of sample means is the distribution of every possible sample mean, which we did not simulate. We simulated 10,000 points per distribution, which is an approximation to the sampling distribution of sample means, but it was still pretty good. The means from all simulated sampling distributions were equal to the population mean to one decimal place.
 
 This whole process works for other parameters too, not just the mean (like proportion or standard deviation).
 
