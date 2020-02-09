@@ -9,19 +9,19 @@ by Tim Christy
 <br>
 
 ### Introduction
-When I first started in coding in Python, I had no idea what virtual environments were. They were never really necessary for me to learn in my coding projects because I just used [Anaconda; which automatically handles virtual environments for you](https://www.anaconda.com/) so you don't have to really learn any of this. In retrospect, this is pretty cool, but I didn't think so several months ago. It just looked like a mess of file installations on my computer and I didn't know what anything did other than take up space. In an effort to understand it all I deleted Anaconda and tried to control everything manually. I started simple with a text editor and IPython from the terminal, but later that grew to include Jupyter Notebooks. In the blog that follows, you'll find what I learned about virtual environments and a good routine for setting up project environments with Jupyter Notebooks (or a text editor).
+When I first started in coding in Python, I had no idea what virtual environments were. Below are my mistakes which first made me aware of virtual environments and several ways to manage them.
 
 <br>
 
 
 ### Virtual Environments   
-Say you’re starting with a new Mac (or restored from factory settings) and you have a fresh installation of Python. You start a project with this installation, but quickly realize it is not enough to code with. You have to add packages that extend Python’s functionality (like numpy, pandas, scikitlearn, etc). So you install pip, install the packages you need, carry on with the project, finish it up, and everything works fine. Then you do another project, pip install some new packages for it, and still everything is fine. And then another project, and another, and on like this until eventually, you start having problems importing packages into your latest project. You go ahead and fix it but then other packages start messing up. Everything is going wrong and you have no idea why. Every line of code you write seems to produce an error. Certain packages can’t be found and you just installed them. This is all very frustrating and it’s why virtual environments exist.
+Say you’re starting with a new Mac (or restored from factory settings) and you have a fresh installation of Python. You start a project with this installation, but quickly realize it is not enough to code with. You have to add packages that extend Python’s functionality (like numpy, pandas, scikitlearn, etc). So you install pip, install the packages you need, carry on with the project, finish it up, and everything works fine. Then you do another project, pip install some new packages for it, and still everything is fine. And then another project, and another, and on like this until eventually, you start having problems importing packages into your latest project. You go ahead and fix it but then other packages start messing up. Certain packages can’t be found and you just installed them.
 
 Here's what's going on: when pip installs pandas, pandas comes with packages upon which it is dependent. Those dependencies are automatically installed right alongside pandas. So when you write ``` pip install pandas ``` you are actually installing several packages - pandas, as well as all the packages pandas depends on.
 
 ![](../../../../assets/imgs/blogs/2019-12-18/pandas_dependencies.png)  
 
-The problems described above are due to these dependencies. To generalize, when main_package1 depends on packageA version 2.2.0 and main_package2 depends on the same packageA but with version 1.9.9 you will have problems using main_package2 after updating packageA to version 2.2.0. You probably could explicitly install both versions, but these problems compound when you begin to install many difference packages and all their dependencies for multiple projects. Maybe you could explicitly install every version of every package you've ever used on your computer, but it's way easier just to use a virtual environment for each project.
+The problems described above are due to these dependencies. To generalize, when main_package1 depends on packageA version 2.2.0 and main_package2 depends on the same packageA but with version 1.9.9 you will have problems using main_package2 after updating packageA to version 2.2.0. You probably could explicitly install both versions, but these problems compound when you begin to install many different packages and all their dependencies for multiple projects. Maybe you could explicitly install every version of every package you've ever used on your computer, but that would be messy, take up too much space, and is unnecessary.
 
 Virtual environments isolate the packages you use for specific projects and have all the packages you install dedicated only to that project. When you start a virtual environment for a project, it is like starting with a clean slate; nothing outside of a typical download of Python is installed. You have to install all the packages you need for the project in the virtual environment. When you are finished with your project you can output the package names you used to a text file that others can then use later. Once you have this text file, you can delete the virtual environment from your computer.  
 
@@ -99,6 +99,39 @@ To see a list of all available kernels write
 ``jupyter kernelspec list``  
 
 <br>
+
+
+### Virtual Environments with Anaconda
+To create a virual environment with Anaconda, navigate to the directory where your project is and write  
+
+``conda create --name name_of_virtual_environment``  
+
+To activate the virtual environment, write  
+
+``source activate name_of_virtual_environment``  
+
+If you'd like to control which version of Python you will use in this environment, write  
+
+``source activate --name  name_of_virtual_environment python=X.X``  
+
+where X.X is the version number of Python.  
+
+To deactivate your virtual environment, write  
+
+``source deactivate``  
+
+To view a list of all the virtual environments you currently have write  
+
+``conda env list``  
+
+To remove an environment write  
+
+``conda remove --name name_of_virtual_environment --all``  
+
+if instead you just want to remove some packages you can write them in lieu of the --all option above.
+
+Alternatively in the Anaconda Navigator, you can create and run virtual environments using the sidebar of the window.
+
 
 
 ### My Current Project Workflow  
