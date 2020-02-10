@@ -1,0 +1,64 @@
+I"7<p>by Tim Christy<br />
+<br /></p>
+<h3 id="introduction">Introduction</h3>
+<p>What is web-scraping? It’s taking data from web pages and storing them elsewhere. Via webscraping, you can select data from web pages and store that data into a csv, database, etc.</p>
+
+<p>There is a bit of legal ambiguity around the scraping of websites to be aware of. It seems to me that so long as the data you are scraping is meant for anybody who visits the site, it is likely ok. If you use it after you get past a paywall, that’s probably not legal. Here are a list of articles regarding the legality of it for those who are interested.</p>
+
+<p><a href="https://thenextweb.com/security/2019/09/10/us-court-says-scraping-a-site-without-permission-isnt-illegal/">US court says scraping a site without permission isn’t illegal</a></p>
+
+<p><a href="https://www.import.io/post/6-misunderstandings-about-web-scraping/">Is Web Scraping Legal? 6 Misunderstandings About Web Scraping</a></p>
+
+<p><a href="http://scrapingauthority.com/2016/08/22/web-scraping-legal">Is Web Scraping Legal? Top 3 Legal Issues in Web Scraping</a></p>
+
+<p><a href="https://towardsdatascience.com/is-web-crawling-legal-a758c8fcacde">Is web crawling legal?
+</a></p>
+
+<p>We’re going to be scraping data from wikipedia, which allows for web scraping. The site we will be scraping in particular is <a href="https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population">List of countries and dependencies by population</a>.</p>
+
+<p><br /></p>
+
+<h3 id="the-packages">The Packages</h3>
+
+<p>We will be using urllib and BeautifulSoup to do out scraping. urllib is part of the Python standard library and should come with Python. If you do not already have BeautifulSoup, you can pip install it via</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pip</span> <span class="n">install</span> <span class="n">beautifulsoup4</span>
+</code></pre></div></div>
+
+<p>pandas is also imported to help with the storing of the data later.</p>
+
+<p><code class="highlighter-rouge">python  
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+import pandas as pd  
+</code></p>
+
+<p>Once these are imported, we can access the web page using the urllib library. The following lines of code do the following:</p>
+
+<p>1) Store the url in string format into a variable URL</p>
+
+<p>2) Opens the web page at the given url</p>
+
+<p>3) Reads in all the html data and stores this data into a variable called html</p>
+
+<p>4) Closes the connection to the website</p>
+
+<p><code class="highlighter-rouge">python  
+URL = 'https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population' # 1)
+uClient = urlopen(URL) # 2)
+html = uClient.read() # 3)
+uClient.close() # 4)  
+</code></p>
+
+<p>If we observe the html variable from above, we see a mess of html data that was taken from the webpage. Below is a preview of the first of many many more lines.</p>
+
+<p><img src="../../../assets/imgs/blogs/2020-02-09/html_mess.png" alt="" /></p>
+
+<p>We can begin to clean this up with BS4. First we create a BeautifulSoup object, which allows us to use BeautifulSoup’s functions to parse through the html data. To make the object we pass our html variable created above and the type of parser we would like to use. We will be using ‘html.parser’ although there are more options than that. You can read about them <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser">here</a>. Once the soup object is created, your can use the prettify() method to observe a more structured output of the html data.</p>
+
+<p><code class="highlighter-rouge">python  
+soup = BeautifulSoup(html, 'html.parser') # Create soup object  
+ print(soup.prettify())  
+</code> <br />
+<img src="../../../assets/imgs/blogs/2020-02-09/prettify_html.png" alt="" /></p>
+:ET
