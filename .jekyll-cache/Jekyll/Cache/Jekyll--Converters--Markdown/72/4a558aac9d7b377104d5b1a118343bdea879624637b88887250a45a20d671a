@@ -1,0 +1,57 @@
+I"�<h3 id="assignment-operator">Assignment Operator</h3>
+
+<p>In Python, when you use the equal sign, it might not behave like you’d expect it to. For example, suppose you want to make a copy of a list and you do the following</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">]</span>
+<span class="n">list2</span> <span class="o">=</span> <span class="n">list1</span></code></pre></figure>
+
+<p>You might think you’ve made a copy of <code class="highlighter-rouge">list1</code> called <code class="highlighter-rouge">list2</code>, but you have not. Instead you’ve made a reference to the same memory location. You can use the <code class="highlighter-rouge">id()</code> function to see the id of the objects. Here you’ll see that they are the same.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">list1</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">list2</span><span class="p">))</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span><span class="o">==</span><span class="nb">id</span><span class="p">(</span><span class="n">list2</span><span class="p">)</span></code></pre></figure>
+
+<p>4581973440<br />
+4581973440</p>
+
+<p>True</p>
+
+<p>This means that if I proceed to work on list2, I will simultaneously be working on list1</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">list2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">list2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">list2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span></code></pre></figure>
+
+<p>As expected list2 now has the added elements 1, 2, and 3 added, but perhaps less expectedly, so does list1</p>
+
+<p><img src="../../../assets/imgs/blogs/2020-02-10/list_copies.png" alt="" /></p>
+
+<h3 id="copy">Copy</h3>
+<p>This is why copy functions exist. There are a few ways in which you can copy a list that does not share the same id as the original.</p>
+
+<p>You can do so with the copy method, by adding .copy() to the end of the list variable to be copied as shown below</p>
+
+<p><img src="../../../assets/imgs/blogs/2020-02-10/copies.png" alt="" /></p>
+
+<p>Below are some other ways to make legitmate copies as well</p>
+
+<p><img src="../../../assets/imgs/blogs/2020-02-10/legit_list.png" alt="" /></p>
+
+<h3 id="what-is-deepcopy">What is deepcopy?</h3>
+
+<p>Every copy method shown above essentially does the same thing; including deepcopy for this type of object. But a problem arises when you start getting into matrices. Take the following for example</p>
+
+<p><img src="../../../assets/imgs/blogs/2020-02-10/A.png" alt="" /></p>
+
+<p>If I use copy on this it works out for the rows</p>
+
+<p><img src="../../../assets/imgs/blogs/2020-02-10/row_copy.png" alt="" /></p>
+
+<p>It did not alter matrix A like expected. However, when I want to alter an element…</p>
+
+<p><img src="../../../assets/imgs/blogs/2020-02-10/element_copy.png" alt="" /></p>
+
+<p>The original gets altered too. That is because the other forms of copying are shallow copies that do not get into the elements of our matrix. Really it is a list of lists, and so the shallow copies only copy the first objects in the outer list (which are lists). This is why changing a whole list worked out with the shallow copy. If you want to copy every element in the matrix and leave the original intact as you manipulate elements of the copy, use the deepcopy function.</p>
+
+<p><img src="../../../assets/imgs/blogs/2020-02-10/deep_copy.png" alt="" /></p>
+:ET
