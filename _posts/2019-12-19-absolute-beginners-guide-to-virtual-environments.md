@@ -9,32 +9,26 @@ by Tim Christy
 <br>
 
 ### Introduction
-When I first started in coding in Python, I had no idea what virtual environments were. Below are my mistakes which first made me aware of virtual environments and several ways to manage them.
+Virtual environments are a way to isolate the requirements for a project. These requirements are usually the packages and Python version used for a specific project. Part of the reason virtual environments are useful is because Python packages are updated, as is Python itself, and some of these updates may cause errors in past projects that used older versions of those packages (or an older Python version). With virtual environments, the requirements of a specific project can be preserved and function the way it was intended to at the time the project was completed.   
 
 <br>
 
 
 ### Virtual Environments   
-Say you’re starting with a new Mac (or restored from factory settings) and you have a fresh installation of Python. You start a project with this installation, but quickly realize it is not enough to code with. You have to add packages that extend Python’s functionality (like numpy, pandas, scikitlearn, etc). So you install pip, install the packages you need, carry on with the project, finish it up, and everything works fine. Then you do another project, pip install some new packages for it, and still everything is fine. And then another project, and another, and on like this until eventually, you start having problems importing packages into your latest project. You go ahead and fix it but then other packages start messing up. Certain packages can’t be found and you just installed them.
+To start working with virtual environments, first it must be created (details in the sections that follow). After the virtual environment is created, it has to be activated in order to use it. When a virtual environment is activated for a project, it is like starting with a clean slate; nothing outside of a typical download of Python is installed. With the environment activated, all package installations from thereon will be installed in the environment. The virtual environment can be deactivated whenever the project is not being worked on and multiple virtual environments can be created for multiple projects, however, only one virtual environment should be activated at a time. When a project is complete, a text file can be made that specify the exact versions of every package used. Once this file is made, the project can be reopened exactly the way it was as when it was first completed.
 
-Here's what's going on: when pip installs pandas, pandas comes with packages upon which it is dependent. Those dependencies are automatically installed right alongside pandas. So when you write ``` pip install pandas ``` you are actually installing several packages - pandas, as well as all the packages pandas depends on.
-
-![](../../../../assets/imgs/blogs/2019-12-18/pandas_dependencies.png)  
-
-The problems described above are due to these dependencies. To generalize, when main_package1 depends on packageA version 2.2.0 and main_package2 depends on the same packageA but with version 1.9.9 you will have problems using main_package2 after updating packageA to version 2.2.0. You probably could explicitly install both versions, but these problems compound when you begin to install many different packages and all their dependencies for multiple projects. Maybe you could explicitly install every version of every package you've ever used on your computer, but that would be messy, take up too much space, and is unnecessary.
-
-Virtual environments isolate the packages you use for specific projects and have all the packages you install dedicated only to that project. When you start a virtual environment for a project, it is like starting with a clean slate; nothing outside of a typical download of Python is installed. You have to install all the packages you need for the project in the virtual environment. When you are finished with your project you can output the package names you used to a text file that others can then use later. Once you have this text file, you can delete the virtual environment from your computer.  
-
-Virtual environments are isolated from each other because in order to use them you have to activate them before going into your project. Fail to do so and your project will use the packages that are pointed to by default; which can lead to problems, but they can be fixed again by activating the virtual environment and installing the correct packages.    
+Virtual environments are isolated from each other. In order to use one it must be activated before going into a project. Fail to do so and the project will use the packages that are pointed to by default; which can lead to problems, but they can be fixed again by activating the virtual environment and installing the correct packages.    
 
 <br>
 
-So the basic process is as follows: I want to start a project, so I create a new project folder on my Desktop and cd into it. Then I activate a virtual environment inside this folder. Once the virtual environment is activated, I can start coding my project, using pip installs as needed. With the environment activated, all pip installs will be stored within the environment. If I need to come back to the project later, I can deactivate the virtual environment and reactivate it again later when I want to work on my project again. When I am finished with my project, I create a requirements text that lists all the packages I used in my project. This requirements text will show up in my project folder. Then I push everything up to github, deactivate the virtual environment and delete it from my computer. I typically delete the whole project once it's finished and on github.
+The basic process is as follows: I want to start a project, so I create a new project folder on my Desktop and cd into it. Then I activate a virtual environment inside this folder. Once the virtual environment is activated, I can start coding my project, using pip installs as needed. With the environment activated, all pip installs will be stored within the environment. If I need to come back to the project later, I can deactivate the virtual environment and reactivate it again later when I want to work on my project again. When I am finished with my project, I create a requirements text that lists all the packages I used in my project. This requirements text will show up in my project folder. Then I push everything up to github (my code and this text file), deactivate the virtual environment and delete it from my computer. I typically delete the whole project once it's finished and on github.
 
 <br>
 If you found that above description to be lacking in specifics, that is because there are many different virtual environment managers that each have their own specific code to start, activate, deactivate a virtual environment, and different pip installs as well. Some of these are listed below.
 
 <br>
+
+
 
 ### venv, virtualenv, pipenv  
 
