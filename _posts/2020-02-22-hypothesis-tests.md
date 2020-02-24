@@ -3,7 +3,9 @@ layout: post
 title: "Hacker Statistics"
 Author: Tim Christy
 ---
-by Tim Christy
+by Tim Christy   
+
+If you prefer to read this in a Jupyter Notebook, that option is available [here](https://nbviewer.jupyter.org/github/tim-christy/Blogs/blob/master/hacker-statistics.ipynb).
 
 <br>
 

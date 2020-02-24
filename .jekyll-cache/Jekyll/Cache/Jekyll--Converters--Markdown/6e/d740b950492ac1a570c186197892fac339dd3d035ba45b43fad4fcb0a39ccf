@@ -1,4 +1,6 @@
-I"J<p>by Tim Christy</p>
+I"ÙJ<p>by Tim Christy</p>
+
+<p>If you prefer to read this in a Jupyter Notebook, that option is available <a href="https://nbviewer.jupyter.org/github/tim-christy/Blogs/blob/master/hacker-statistics.ipynb">here</a>.</p>
 
 <p><br /></p>
 
@@ -28,6 +30,8 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">'A million random samples revealing rand() distribution'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1_000_000</span><span class="p">));</span> <span class="c1"># What 1000000 points of the distribution looks like from which this number came  
 </span></code></pre></div></div>
+<p>0.771320643266746</p>
+
 <p><img src="../../../../../assets/imgs/blogs/2020-02-22/rand_dist.png" alt="image" /></p>
 
 <p><br /></p>
