@@ -5,7 +5,7 @@ Author: Tim Christy
 ---
 by Tim Christy  
 
-(if you would like to view this blog in a jupyter notebook as well as all the code used, you can do so here)
+(if you would like to view this blog in a jupyter notebook as well as all the code used, [you can do so here](https://nbviewer.jupyter.org/github/tim-christy/Blogs/blob/master/confidence-interval-of-the-mean.ipynb))
 
 
 # Intro  
