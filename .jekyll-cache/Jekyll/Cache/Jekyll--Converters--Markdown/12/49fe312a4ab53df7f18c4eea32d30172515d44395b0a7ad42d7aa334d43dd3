@@ -1,0 +1,40 @@
+I"‰<h1 id="intro">Intro</h1>
+<p>This blog provides some intuition behind confidence intervals.</p>
+
+<p>Confidence intertvals give a range of numbers in which a statistic of interest is captured a certain percentage of the time. For example, a 95% confidence interval indicates that if you calculated a confidence interval 100 times by this method, 95 or those confidence intervals would capture the statistic of interest.</p>
+
+<p>The statistic of interest is the mean. The idea is that there is some population distribution whose mean you would like to estimate. You can estimate the population mean by taking samples, so long as the sample size does not exceed 10% of the population size. If the population distribution is normal, or the sample size large enough (30 or larger; see central limit theorem) and the population is not overly skewed, the sampling distribution will also be normal. Using properties of a normal distribution, we can estimate an interval that contains the mean.</p>
+
+<h3 id="assumptions">Assumptions</h3>
+<ul>
+  <li>
+    <p>Samples are random</p>
+  </li>
+  <li>
+    <p>Sample sizes are done with replacement or not greater than 10% of population (samples are independent)</p>
+  </li>
+  <li>
+    <p>Population is normally distributed or symmetric</p>
+
+    <ul>
+      <li>If not normally distributed, then sample size greater than 30 and population not overly skewed</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The basic idea behind, random sampling methods aside, is that the sampling distribution needs to be normal for the interval to work.</p>
+
+<p>Ok, proceeding now by example.</p>
+
+<p>To illustrate, we will use a very straighforward example. The population distribution will be normal. Suppose that we are trying to measure the mean height of a small country that has a population of exactly 1 million people. This is shown below where the red line is the actual population mean.</p>
+
+<p><img src="../../../../../assets/imgs/blogs/2020-02-15/pop_dist.png" alt="" /></p>
+
+<p>This data would usually be impractical to obtain in real life (babies are born, people die, people grow, etc). It is unlikely that you will get a true snapshot of the heights of everybody in the population in time to calculate the true mean. If you had an easy way to do it though, there would be no need for confidence intervals. You could just get the acutal mean of this distribution. This is value is what we are trying to estimate by taking samples and calculating confidence intervals.</p>
+
+<p>If needed, here is quick explanation of sampling distributions: From the population above a second distribution can be obtained from sample means. This is called the sampling distribution of the mean. If you go out and sample 5 people and take the mean of those 5 people, you will get one data point in the sampling distribution of the mean. If you go out and sample <em>every possible combination</em> of 5 people means the histogram will reveal the entire sampling distribution of sample means. There is a different sampling distribution for every sample size chosen. The higher the sample size, the less the distribution will vary. The mean of the sampling distribution is equal to the mean of the population distribution.</p>
+
+<p>We will start with a sample size of n=5. That is, in your endeavor to get the mean height of all one million people in this country, you go out and randomly sample five people and take their mean height. The distribution below shows all the possible mean heights you could wind up with for a sample of 5 people and their associated probabilities (the higher the curve, the more probable at that height).</p>
+
+<p><img src="../../../../../assets/imgs/blogs/2020-02-15/samp_dist.png" alt="" /></p>
+:ET
