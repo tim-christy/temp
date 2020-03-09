@@ -7,7 +7,7 @@ by Tim Christy
 
 <br>
 
-Imagine that you want to know the mean height of everybody in Reno, NV. Since it is impractical to go out and measure the height of all 250,000+ people, you would have to rely on sample data (*randomly* sampled) to estimate this parameter. The practical application of the **central limit theorem** here says that every single possible mean we could get from our samples of size n follows a normal distribution with a mean that will be equal to the population mean. If you think about it with a sample size of n=1, this completely makes sense because every possible sample mean you could obtain from a population with a sample of size n=1 is the population distribution itself.  
+Imagine that you want to know the mean height of everybody in Reno, NV. Since it is impractical to go out and measure the height of all 250,000+ people, you would have to rely on sample data to estimate this parameter (samples must be randomly sampled and independent). The practical application of the **central limit theorem** here says that every single possible mean we could get from our samples of size n follows a normal distribution with a mean that will be equal to the population mean. If you think about it with a sample size of n=1, this completely makes sense because every possible sample mean you could obtain from a population with a sample of size n=1 is the population distribution itself.  
 
 <br>
 
@@ -119,4 +119,4 @@ It is worth reiterating that the distribution of sample means is the distributio
 
 This whole process works for other parameters too, not just the mean (like proportion or standard deviation).
 
-Why does this matter? This theorem is important because it is what allows for hypothesis testing and confidence intervals. These methods rely on the assumption of a normal distribution. The central limit theorem helps to make that assumption valid.  
+Why does this matter? This theorem is important because it is what allows for hypothesis testing and confidence intervals. These methods rely on the assumption of a normal distribution. The central limit theorem helps to make the assumption of normality valid.  
