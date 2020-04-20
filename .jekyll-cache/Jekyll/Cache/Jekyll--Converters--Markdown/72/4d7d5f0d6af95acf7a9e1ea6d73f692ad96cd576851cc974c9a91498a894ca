@@ -1,11 +1,21 @@
-I"�9<p>by Tim Christy</p>
+I"�<<p>by Tim Christy</p>
 
 <p><br /></p>
 
 <h3 id="introduction">Introduction</h3>
-<p>Virtual environments are a way to isolate the requirements for a project. These requirements are usually the packages and Python version used for a specific project. Part of the reason virtual environments are useful is because Python packages are updated, as is Python itself, and some of these updates may cause errors in past projects that used older versions of those packages (or an older Python version). With virtual environments, the requirements of a specific project can be preserved and function the way it was intended to at the time the project was completed.</p>
-
-<p><br /></p>
+<p>When working on a project in Python, you’ll likely be importing packages to expand the functionality of your code (stuff like numpy, pandas, etc). A problem arises with this in that these packages are being updated all the time and these updates can mess up the functionality of your code later on. Virtual environments are a way to contain the exact versions of the packages you use for a specific project. This way, if you come back to the project many updates later, the project will still work exactly as it did when you first coded it.  <br />
+<br />
+The basic process is as follows: \</p>
+<ul>
+  <li>Start a project\</li>
+  <li>Create a virtual environment for the project\</li>
+  <li>pip install packages you need for the project into the virtual environment\</li>
+  <li>After the project is finished use the virtual environment to output a text document that lists every package and version number you used (usually called “requirements.txt” or “environment.yml”)\</li>
+  <li>Upload to github or wherever\</li>
+  <li>With the project complete and uploaded to github with the requirements, you can delete it off your computer\</li>
+  <li>In the future, if you want to run this project again, you can pip install out of the requirements text and open the project as you had it when you first coded it
+<br /></li>
+</ul>
 
 <h3 id="virtual-environments">Virtual Environments</h3>
 <p>To start working with virtual environments, first it must be created (details in the sections that follow). After the virtual environment is created, it has to be activated in order to use it. When a virtual environment is activated for a project, it is like starting with a clean slate; nothing outside of a typical download of Python is installed. With the environment activated, all package installations from thereon will be installed in the environment. The virtual environment can be deactivated whenever the project is not being worked on and multiple virtual environments can be created for multiple projects, however, only one virtual environment should be activated at a time. When a project is complete, a text file can be made that specify the exact versions of every package used. Once this file is made, the project can be reopened exactly the way it was as when it was first completed.</p>

@@ -1,6 +1,6 @@
-I"v/<p>by Tim Christy</p>
+I"ì/<p>by Tim Christy</p>
 
-<p>(if you would like to view this blog in a jupyter notebook as well as all the code used, you can do so here)</p>
+<p>(if you would like to view this blog in a jupyter notebook as well as all the code used, <a href="https://nbviewer.jupyter.org/github/tim-christy/Blogs/blob/master/confidence-interval-of-the-mean.ipynb">you can do so here</a>)</p>
 
 <h1 id="intro">Intro</h1>
 <p>This blog provides some intuition behind confidence intervals.</p>

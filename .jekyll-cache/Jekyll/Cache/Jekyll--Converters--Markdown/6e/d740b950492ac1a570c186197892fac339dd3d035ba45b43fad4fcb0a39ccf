@@ -1,4 +1,4 @@
-I"ÙJ<p>by Tim Christy</p>
+I"lL<p>by Tim Christy</p>
 
 <p>If you prefer to read this in a Jupyter Notebook, that option is available <a href="https://nbviewer.jupyter.org/github/tim-christy/Blogs/blob/master/hacker-statistics.ipynb">here</a>.</p>
 
@@ -22,13 +22,13 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">())</span> <span class="c1"># single random number
+<span class="k">print</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">rand</span><span class="p">())</span> <span class="c1"># single random number
 </span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">'A million random samples revealing rand() distribution'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1_000_000</span><span class="p">));</span> <span class="c1"># What 1000000 points of the distribution looks like from which this number came  
+<span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'A million random samples revealing rand() distribution'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">hist</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1_000_000</span><span class="p">));</span> <span class="c1"># What 1000000 points of the distribution looks like from which this number came  
 </span></code></pre></div></div>
 <p>0.771320643266746</p>
 
@@ -47,15 +47,15 @@
 </span><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1_000_000</span><span class="p">):</span>
 
     <span class="c1"># Flip the coin twice
-</span>    <span class="n">toss1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mf">0.5</span>
-    <span class="n">toss2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mf">0.5</span>
+</span>    <span class="n">toss1</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">rand</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mf">0.5</span>
+    <span class="n">toss2</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">rand</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mf">0.5</span>
 
     <span class="c1"># If they both come up heads, count it in the list
 </span>    <span class="k">if</span> <span class="p">(</span><span class="n">toss1</span><span class="o">+</span><span class="n">toss2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="n">heads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">heads</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># Print the probability
-</span><span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'Probability: {sum(heads)/1_000_000}'</span><span class="p">)</span>  
+</span><span class="k">print</span><span class="p">(</span><span class="s">f'Probability: </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">heads</span><span class="p">)</span><span class="o">/</span><span class="mi">1_000_000</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>  
 </code></pre></div></div>
 <p>Probability: 0.250113</p>
 
@@ -73,10 +73,10 @@
 
 <span class="k">for</span> <span class="n">trial</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1_000_000</span><span class="p">):</span>
 
-    <span class="n">outcome</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">die_roll</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
-    <span class="n">sums</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">outcome</span><span class="p">)</span> <span class="o">==</span> <span class="mi">25</span><span class="p">)</span>
+    <span class="n">outcome</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">(</span><span class="n">die_roll</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
+    <span class="n">sums</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">outcome</span><span class="p">)</span> <span class="o">==</span> <span class="mi">25</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'Probability: {sum(sums)/1_000_000}'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">f'Probability: </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">sums</span><span class="p">)</span><span class="o">/</span><span class="mi">1_000_000</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
 
 </code></pre></div></div>
 <p>Probability: 0.016013<br />
@@ -97,7 +97,7 @@ Theoretical Probability: 7/432 = 0.01620</p>
 </span><span class="kn">import</span> <span class="nn">random</span> <span class="c1"># Used to sample from deck
 </span>
 <span class="c1"># Building the deck
-</span><span class="n">deck_of_cards</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="n">card</span> <span class="k">for</span> <span class="n">card</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s">'J'</span><span class="p">,</span> <span class="s">'Q'</span><span class="p">,</span> <span class="s">'K'</span><span class="p">,</span> <span class="s">'A'</span><span class="p">],</span>
+</span><span class="n">deck_of_cards</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="n">card</span> <span class="k">for</span> <span class="n">card</span> <span class="ow">in</span> <span class="n">itertools</span><span class="p">.</span><span class="n">product</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s">'J'</span><span class="p">,</span> <span class="s">'Q'</span><span class="p">,</span> <span class="s">'K'</span><span class="p">,</span> <span class="s">'A'</span><span class="p">],</span>
                                                         <span class="p">[</span><span class="s">'H'</span><span class="p">,</span> <span class="s">'S'</span><span class="p">,</span> <span class="s">'C'</span><span class="p">,</span> <span class="s">'D'</span><span class="p">])])</span>
 
 <span class="c1"># Defining sets that are Royal Flushes
@@ -108,10 +108,10 @@ Theoretical Probability: 7/432 = 0.01620</p>
 
 <span class="c1"># Randomly sampling 5 cards from the deck one million times. If the 5 cards turn out to be any kind of
 # royal flush, True is returned. This list can then be summed to see how many times a royal flush occurred.
-</span><span class="n">RFs</span> <span class="o">=</span> <span class="p">[(</span><span class="nb">set</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">deck_of_cards</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="o">==</span> <span class="n">RF_hearts</span><span class="p">)</span> <span class="o">|</span>
-       <span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">deck_of_cards</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="o">==</span> <span class="n">RF_spades</span><span class="p">)</span> <span class="o">|</span>
-       <span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">deck_of_cards</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="o">==</span> <span class="n">RF_clubs</span><span class="p">)</span> <span class="o">|</span>
-       <span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">deck_of_cards</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="o">==</span> <span class="n">RF_diamonds</span><span class="p">)</span>
+</span><span class="n">RFs</span> <span class="o">=</span> <span class="p">[(</span><span class="nb">set</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="n">sample</span><span class="p">(</span><span class="n">deck_of_cards</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="o">==</span> <span class="n">RF_hearts</span><span class="p">)</span> <span class="o">|</span>
+       <span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="n">sample</span><span class="p">(</span><span class="n">deck_of_cards</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="o">==</span> <span class="n">RF_spades</span><span class="p">)</span> <span class="o">|</span>
+       <span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="n">sample</span><span class="p">(</span><span class="n">deck_of_cards</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="o">==</span> <span class="n">RF_clubs</span><span class="p">)</span> <span class="o">|</span>
+       <span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="n">sample</span><span class="p">(</span><span class="n">deck_of_cards</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="o">==</span> <span class="n">RF_diamonds</span><span class="p">)</span>
        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1_000_000</span><span class="p">)]</span>
 
 <span class="c1"># Probability of getting a royal flush via simulation

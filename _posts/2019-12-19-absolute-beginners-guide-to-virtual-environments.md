@@ -9,8 +9,16 @@ by Tim Christy
 <br>
 
 ### Introduction
-Virtual environments are a way to isolate the requirements for a project. These requirements are usually the packages and Python version used for a specific project. Part of the reason virtual environments are useful is because Python packages are updated, as is Python itself, and some of these updates may cause errors in past projects that used older versions of those packages (or an older Python version). With virtual environments, the requirements of a specific project can be preserved and function the way it was intended to at the time the project was completed.   
-
+When working on a project in Python, you'll likely be importing packages to expand the functionality of your code (stuff like numpy, pandas, etc). A problem arises with this in that these packages are being updated all the time and these updates can mess up the functionality of your code later on. Virtual environments are a way to contain the exact versions of the packages you use for a specific project. This way, if you come back to the project many updates later, the project will still work exactly as it did when you first coded it.  \\
+\\
+The basic process is as follows: \\
+- Start a project\\
+- Create a virtual environment for the project\\
+- pip install packages you need for the project into the virtual environment\\
+- After the project is finished use the virtual environment to output a text document that lists every package and version number you used (usually called "requirements.txt" or "environment.yml")\\
+- Upload to github or wherever\\
+- With the project complete and uploaded to github with the requirements, you can delete it off your computer\\
+- In the future, if you want to run this project again, you can pip install out of the requirements text and open the project as you had it when you first coded it
 <br>
 
 

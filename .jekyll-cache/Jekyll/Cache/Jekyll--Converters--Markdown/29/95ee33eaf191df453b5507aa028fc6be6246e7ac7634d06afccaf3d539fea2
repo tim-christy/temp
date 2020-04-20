@@ -1,0 +1,166 @@
+I"w<p>By Tim Christy</p>
+
+<p>The purpose of this post is to document how my computer is set up for data science in case I ever have to do it again. There are a lot of different ways to do this, but the following is the way I’m most comfortable with for the time being.</p>
+
+<ol>
+  <li><a href="#install-homebrew">Install Homebrew</a></li>
+  <li><a href="#iterm2-set-up">iTerm2 Set Up</a></li>
+  <li><a href="#pyenv">Pyenv</a></li>
+  <li><a href="#pipenv">Pipenv</a></li>
+  <li><a href="#Postgresql">Postgresql</a></li>
+  <li><a href="#setting-up-atom-with-jekyll-serve">Setting Up Atom with Jekyll Serve</a></li>
+  <li><a href="#project-workflow">Project Workflow</a></li>
+</ol>
+
+<p><br /></p>
+
+<h2 id="install-homebrew">Install Homebrew</h2>
+
+<p><code class="highlighter-rouge">bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+</code>
+<br /></p>
+
+<h2 id="iterm2-set-up">iTerm2 Set Up</h2>
+
+<ul>
+  <li>
+    <p>Install iTerm2 by navigating to the <a href="https://www.iterm2.com/">website</a> or by typing
+<code class="highlighter-rouge">brew cask install iterm2</code></p>
+  </li>
+  <li>
+    <p>Customize iTerm2 Colors
+Go to <a href="https://github.com/mbadolato/iTerm2-Color-Schemes">this github page</a>, download the font you want under the xfce4terminal/colorschemes folder, and follow the steps below but only selecting your desired scheme. To download all of them:</p>
+
+    <ul>
+      <li>Clone the repository</li>
+      <li>Open iTerm2</li>
+      <li>Click on the iTerm2 menu in the upper left corner</li>
+      <li>Select Preferences</li>
+      <li>Click on Profiles</li>
+      <li>Click on the Colors submenu</li>
+      <li>Click on the dropdown box in the bottom right corner</li>
+      <li>Click import</li>
+      <li>Navigate to the iTerm2-Color-Schemes folder you cloned</li>
+      <li>Navigate to Schemes</li>
+      <li>Click Open</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Now you can select a color scheme and view it on your iTerm2 terminal.</p>
+
+<ul>
+  <li>Customize iTerm2 Fonts
+Navigate to <a href="https://github.com/powerline/fonts">this github webpage</a> and clone it. Then navigate to the folder (via command line). Once inside the fonts folder type <code class="highlighter-rouge">./install.sh</code></li>
+</ul>
+
+<p>To change your font, go to the top left corner, select Preferences, then Profiles, then Text in the submenu. There is a drop down menu where you can select your desired font.</p>
+
+<ul>
+  <li>Customize iTerm2 Theme
+Type this into the command line
+<code class="highlighter-rouge">sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"</code></li>
+</ul>
+
+<p>This downloads many different themes. You can preview <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">screenshots of them here</a>. To use a theme, navigate to your home directory and open the .zshrc file with a text editor. The default will be “robbyrussell”. Change this to whichever theme you prefer. You can also type “random” to have random themes load each time you open the terminal.</p>
+
+<p>You may get some text about insecure files when you open your prompt. Pasting and running the code provided by the prompt cleared it up for me.</p>
+
+<p><br /></p>
+
+<h2 id="pyenv">Pyenv</h2>
+
+<p>Install <a href="https://github.com/pyenv/pyenv#homebrew-on-macos">pyenv</a></p>
+
+<p>In terminal, write</p>
+<ul>
+  <li><code class="highlighter-rouge">brew install pyenv</code></li>
+  <li><code class="highlighter-rouge">echo -e 'if command -v pyenv 1&gt;/dev/null 2&gt;&amp;1; then\n  eval "$(pyenv init -)"\nfi' &gt;&gt; ~/.zshrc</code></li>
+  <li><code class="highlighter-rouge">exec "$SHELL"</code></li>
+  <li><code class="highlighter-rouge">pyenv install 3.8.0</code>
+or whichever version you prefer rather than 3.8.0.</li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="pipenv">Pipenv</h2>
+<p>Install <a href="https://pypi.org/project/pipenv/">pipenv</a></p>
+
+<p><code class="highlighter-rouge">brew install pipenv</code></p>
+
+<p><br /></p>
+
+<h2 id="postgresql">Postgresql</h2>
+<p>Install <a href="https://postgresapp.com/downloads.html">Postgresql</a> by downloading the second download option on that site. The first one only comes with one version while the second can handle several versions.</p>
+
+<p>Once it’s done downloading initialize a server and click on it. This should bring up your terminal. At the top of the terminal it will list the path at which psql is found. (/Applications/Postgres.app/Contents/Versions/12/bin)</p>
+
+<p>Open .zshrc and append this to your PATH variable. Postgresql is good to go.</p>
+
+<p><br /></p>
+
+<h2 id="setting-up-atom-with-jekyll-serve">Setting up Atom with Jekyll Serve</h2>
+<p>Download <a href="https://atom.io/">atom</a>, install platformio terminal in the settings, and then type in the following</p>
+<ul>
+  <li><code class="highlighter-rouge">xcode-select --install</code></li>
+  <li><code class="highlighter-rouge">brew install rbenv</code></li>
+  <li><code class="highlighter-rouge">rbenv init</code></li>
+  <li>paste <code class="highlighter-rouge">eval "$(rbenv init -)"</code> into .zshrc (before exports)</li>
+  <li><code class="highlighter-rouge">rbenv install 2.7.1</code> or latest</li>
+  <li><code class="highlighter-rouge">rbenv global 2.7.1</code></li>
+  <li><code class="highlighter-rouge">gem install --user-install bundler jekyll</code></li>
+  <li><code class="highlighter-rouge">echo 'export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"' &gt;&gt; ~/.bash_profile</code></li>
+  <li><code class="highlighter-rouge">gem install minima</code></li>
+  <li><code class="highlighter-rouge">gem install jekyll-feed</code></li>
+</ul>
+
+<p>If you have problems with the port (i.e., “Address already in use - bind(2) for 127.0.0.1:4000”) try</p>
+
+<p><code class="highlighter-rouge">ps aux | grep jekyll</code></p>
+
+<p>The first set of numbers returned is the port number. Then write</p>
+
+<p><code class="highlighter-rouge">kill -9 (port_number)</code></p>
+
+<p>Then restart jekyll serve.</p>
+
+<p><br /></p>
+
+<h2 id="project-workflow">Project Workflow</h2>
+
+<ul>
+  <li>Make a directory where you would like to store your project and cd into it</li>
+  <li><code class="highlighter-rouge">pipenv install ipykernel</code></li>
+  <li><code class="highlighter-rouge">pipenv shell</code></li>
+  <li><code class="highlighter-rouge">python -m ipykernel install --user --name=name_of_virtual_environment</code></li>
+  <li><code class="highlighter-rouge">jupyter notebook</code></li>
+</ul>
+
+<p>Then you can start your project. Use</p>
+
+<p><code class="highlighter-rouge">import sys
+!{sys.executable} -m pip install package_name_here</code></p>
+
+<p>To install packages.</p>
+
+<p>When you are finished completely, exit out of Jupyter and write</p>
+
+<p><code class="highlighter-rouge">pipenv lock</code> and/or <code class="highlighter-rouge">pipenv lock -r &gt; requirements.txt</code></p>
+
+<p>You can then begin removing the environment and the kernel. To view the list of kernels:</p>
+
+<p><code class="highlighter-rouge">jupyter kernelspec list</code></p>
+
+<p>To remove a kernel:</p>
+
+<p><code class="highlighter-rouge">jupyter kernelspec uninstall name_of_virtual_environment</code></p>
+
+<p>and to remove the environment, make sure you’ve exited the environment (by writing <code class="highlighter-rouge">exit</code>) and write:</p>
+
+<p><code class="highlighter-rouge">pipenv --rm</code></p>
+
+<p>To install requirements from a package:</p>
+
+<p><code class="highlighter-rouge">pipenv install -r requirements.txt</code></p>
+:ET

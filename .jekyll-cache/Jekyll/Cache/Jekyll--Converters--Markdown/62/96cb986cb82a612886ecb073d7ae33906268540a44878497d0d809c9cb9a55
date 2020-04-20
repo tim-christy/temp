@@ -1,0 +1,34 @@
+I"]<p>by Tim Christy</p>
+
+<p>There are newer versions of MySQL available here <a href="https://dev.mysql.com/downloads/">https://dev.mysql.com/downloads/</a>, but they did not work for my computer. For this reason, I’m using an older version that is stable and installed without errors.</p>
+
+<p>The version I used is 5.6.13 and is available for download here: <a href="https://drive.google.com/file/d/1ZqeVimWS77Xpy5LN6Oi73I6nu8h0KZNI/view?usp=sharing">mysql-installer-community-5.6.13.1.msi</a></p>
+
+<p>After downloading that and starting the install you will see this</p>
+
+<p><img src="../../../../../assets/imgs/blogs/2020-02-29/win1.png" alt="" /></p>
+
+<p>Click <code class="highlighter-rouge">Install MySQL Products</code>, agree to the terms, and skip the updates. After this, you will see the following</p>
+
+<p><img src="../../../../../assets/imgs/blogs/2020-02-29/win2.png" alt="" /></p>
+
+<p>You can choose which install you prefer. I would recommend either Developer or Full install.</p>
+
+<p>Continue through the set-up wizard until you arrive at this page</p>
+
+<p><img src="../../../../../assets/imgs/blogs/2020-02-29/win3.png" alt="" /></p>
+
+<p><em>Here it is important that you remember the password you input otherwise you will be unable to access the server.</em> Input your password and remember it. On the following page you can name your server instance. I will leave mine with the default name of MySQL56. Continue with the installation until you get to the end screen shown below</p>
+
+<p><img src="../../../../../assets/imgs/blogs/2020-02-29/win4.png" alt="" /></p>
+
+<p>Click “Finish” and the workbench should start. This is an interface that allows you to interact with the server.</p>
+
+<p><img src="../../../../../assets/imgs/blogs/2020-02-29/win5.png" alt="" /></p>
+
+<p>Double click on the “Local Instance” box and input your password from before and that’s it. You should be able to see the following</p>
+
+<p><img src="../../../../../assets/imgs/blogs/2020-02-29/win6.png" alt="" /></p>
+
+<p>and that’s it. Installation is complete and this is what you will use to do all your database tasks with MySQL.</p>
+:ET
